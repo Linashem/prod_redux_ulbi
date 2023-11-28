@@ -1,15 +1,18 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import userReducer from "./reducers/UserSlice";
 
 // создан корневой reducer,
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  userReducer,
+});
 
 //конфигурируем redux хранилище
 export const setupStor = () => {
   return configureStore({
     //указали корневой reducer
-     reducer: rootReducer });
+    reducer: rootReducer,
+  });
 };
-
 
 //типы с помощью которых взаимодействуем с хранилищем
 //получаем тип состояния из reducer и стора
