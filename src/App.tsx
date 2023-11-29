@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       {isLoading&&<div>Loading...</div>}
-      {error&& <div>ERROR</div> }
+      {error&& <div>{error}</div> }
       {users.map((u) => (
         <h1>{u.name}</h1>
       ))}
