@@ -2,17 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server 1",
-      "body": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "json-server 2",
-      "body": "typicode"
-    },
-    {
-      "id": 3,
-      "title": "json-server 3",
+      "title": "j1",
       "body": "typicode"
     },
     {
@@ -28,11 +18,6 @@
     {
       "id": 6,
       "title": "json-server 6",
-      "body": "typicode"
-    },
-    {
-      "id": 7,
-      "title": "json-server 7",
       "body": "typicode"
     },
     {
