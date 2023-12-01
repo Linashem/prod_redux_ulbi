@@ -3,6 +3,7 @@ import "./App.css";
 import { useAppDispatch, useAppSelector } from "./hooks/redux";
 import { userSlice } from "./store/reducers/UserSlice";
 import { fetchUsers } from "./store/reducers/ActionCreators";
+import { PostContainer } from "./components/PostContainer";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -15,13 +16,16 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
+    {/* <div>
       {isLoading&&<div>Loading...</div>}
       {error&& <div>{error}</div> }
       {users.map((u) => (
         <h1>{u.name}</h1>
       ))}
-    </div>
+    </div> */}
+    <PostContainer/>
+    </>
   );
 }
 

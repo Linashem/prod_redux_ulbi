@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import userReducer from "./reducers/UserSlice";
+import { postAPI } from "../services/PostService";
 
 // создан корневой reducer,
 const rootReducer = combineReducers({
   userReducer,
+  [postAPI.reducerPath]: postAPI.reducer,
 });
 
 //конфигурируем redux хранилище
@@ -11,6 +13,8 @@ export const setupStor = () => {
   return configureStore({
     //указали корневой reducer
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(postAPI.middleware),
   });
 };
 
